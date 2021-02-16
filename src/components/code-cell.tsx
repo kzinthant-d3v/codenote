@@ -26,7 +26,14 @@ const CodeCell = () => {
         <Resizable direction="horizontal">
           <CodeEditor
             onChange={(value) => setInput(value)}
-            initialValue="//Write some code for id=root div!"
+            initialValue={
+              "//Write some code for id=root div!" +
+              "\n" +
+              "//You can use React too, just import React and ReactDOM" +
+              "\n" +
+              "\n" +
+              "let root = document.getElementById('root');"
+            }
           />
         </Resizable>
         <Preview code={code} err={err} />
